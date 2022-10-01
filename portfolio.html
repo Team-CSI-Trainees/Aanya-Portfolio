@@ -6,72 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
         body{
-            color: rgb(90, 90, 184);
+            color:black;
+            background-color:rgb(135, 158, 235);
+            overflow-x: hidden;
         }
         .navbar{
             display: flex;
-            height:175px;
-            justify-content: center;
+            height:100px;
             align-items: center;
-            background-color: palevioletred;
+            background-color: rgb(9,3,34);
             border-radius: 8px;
-            position: sticky;
         }
         .navbar ul{
             display: flex;
             list-style: none;
-            margin: 20px 0px; 
-            /*overflow:auto;*/
+            margin: 10px 10px 10px 10px; 
         }
         .navbar li{
             float:left;
             font-family: century;
             font-size:25px;
-            list-style:none;
             margin: 18px 20px;
         }
         .navbar li a{
-            padding: 3px 3px;
+            padding: 13px 20px;
             text-decoration: none;
             color: white;
         }
         .navbar li a:hover{
-            color: black;
+            color: rgb(175, 97, 175);
             box-shadow: 0 0 10px white;
+            cursor: pointer;
         }
-        .search{
-            float: right;
-            color: white;
-            padding: 12px 75px;
+        .Search{
+            padding: 3px 19px;
+            float: right; 
+            margin: 19px 50px 10px 10px;
         }
         .navbar input{
             border: 2px solid black;
             border-radius: 8px;
-            padding: 3px 19px;
-            float: right; 
-            width: 129px;
+            width:100px;
         }
-        .about{
+        .profile{
             border: 2px solid black;
-            display: inline block;
-            margin: 12px auto;
+            height: 300px;
+            width: 100%;
+            display: flex;
+            margin: 12px ;
+            flex-wrap:wrap;
+            justify-content:center;
+        
+        }
+        .item{
+            /*border: 2px solid black;*/
+            width: 300px;
+            margin: 12px;
+            padding: 10px 20px 10px 20px;
+        }
+        #item1{
+            flex-basis: 520px;
+            padding: 20px 60px;
+            font-size: larger;
+        }
+        .aboutme{
+            list-style: none;
+        }
+        .tech{
+            list-style:none;
+        }
+        .img{
+            padding: 3px 19px;
+            margin: 19px 5px 19px 350px;
+            
         }
         .academics{
             border: 2px solid black;
-            display: inline block;
-            margin: 12px auto;
+            display: flex;
+            margin: 12px;
+            font-size:larger
         }
         .skills{
             border: 2px solid black;
-            display: inline block;
-            margin: 12px auto;
+            display: flex;
+            margin: 12px ;
+            font-size: larger;
         }
         .hobbies{
             border: 2px solid black;
-            display: inline block;
-            margin: 12px auto;
+            display: flex;
+            margin: 12px ;
+            font-size: larger;
         }
+        
         
 
     </style>
@@ -80,31 +113,89 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Hobbies</a></li>
+                <li><a href="#prof">Profile</a></li>
+                <li><a href="#acad">Academics</a></li>
+                <li><a href="#skil">Skills</a></li>
+                <li><a href="#hob">Hobbies</a></li>
+                <div class="img"><img src="23086926.jpg" width="20" height="20"></div>
                 <div class="Search">
-                    <input type="text" name="search" id="search" placeholder="Search this website">
+                    <input type="text" name="search" id="search" placeholder="Search here">
                 </div>
                 
             </ul>
         </nav>
     </header>
-    <div class="about">
-        <h1 class="headings"> I am AANYA MITTAL</h1>
-    </div>
-    <div class="academics">
+    <br>
+    <marquee>ALL ABOUT ME</marquee>
+    <section class="profile" id="prof">
+        <section class="item" id="item1">
+        <h4 align-items:center>PROFILE</h4>
+        <br>
+        <p id="first">Hi, I am <h1>Aanya Mittal.</h1></p>
+        <ul class="aboutme">
+            <li>I am here to tell you about myself.</li>
+            <li>I am from Muzaffarnagar.</li>
+            <li>I am currently pursuing B.Tech in AKGEC, Ghaziabad.</li>
+            <li>I am a hard working personality with a learning attitude.</li>
+        </ul>
+        </section>
+        <section class="item" id="item2"><img src="20220914_101404.jpg" width="250" height="250"></section>
 
+         
+        
+    </section>
+    <section class="academics" id="acad"><h4>EDUCATIONAL QUALIFICATIONS</h4>
+    <table class="qual">
+        <tr>
+            <th>S.No</th>
+            <th>Qualification</th>
+            <th>Year</th>
+            <th>Scl/College</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>High Scl</td>
+            <td>2019</td>
+            <td>HACS, Mzn</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Intermediate</td>
+            <td>2021</td>
+            <td>HACS, Mzn</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>B.Tech (crnly doing)</td>
+            <td>2025</td>
+            <td>AKGEC, Ghzb</td>
+        </tr>
+    </table>
 
-    </div>
-    <div class="skills">
-
-    </div>
-    <div class="hobbies">
-
-    </div>
+</section>
+    <section class="skills" id="skil">
+    <h4>SKILLS</h4>
+    <br>
+    <p>My skills include</p>
+    <br>
+    <ul class="tech">
+        <li>C language</li>
+        <li>SQL (Structured Query Language)</li>
+        <li>HTML</li>
+        <li>Basic CSS</li>
+        <li>Basic Python</li>
+        <li>C++ (currently working)</li>
+    </ul>
+    </section>
+    <section class="hobbies" id="hob"><h4>HOBBIES</h4>
+        <p>My hobbies include</p>
+        <p>Reading books, Playing Basketball and listening songs.</p>
+    
+    </section>
+    <footer>
+        <h5>Contacts</h5>
+        <p>Phone: 9548203750<br> Email: aanyahmmittal@gmail.com</p>
+    </footer>
     
 </body>
 </html>
